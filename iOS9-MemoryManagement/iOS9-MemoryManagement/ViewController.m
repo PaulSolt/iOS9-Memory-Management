@@ -62,6 +62,9 @@
 	
 	james.car = honda; // Car: 2
 	[honda release];	// Car: 1  // dealer sells car
+	
+	//james.car = honda; // Car: 2 // crash!
+
 	honda = nil;
 	
 	

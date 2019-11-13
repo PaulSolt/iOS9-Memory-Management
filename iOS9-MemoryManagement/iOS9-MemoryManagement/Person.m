@@ -32,14 +32,16 @@
 	[_car release];
 	_car = nil;
 	
-	// Call [super dealloc] last in your 
+	// Call [super dealloc] last in your
 	[super dealloc];
 }
 
 
-//- (void)setCar:(Car *)car {
-//	[_car release];
-//	_car = [car retain];
-//}
+- (void)setCar:(Car *)car {
+	if (_car != car) { // Fixes crash on assignment to same car
+		[_car release];
+		_car = [car retain];
+	}
+}
 
 @end
