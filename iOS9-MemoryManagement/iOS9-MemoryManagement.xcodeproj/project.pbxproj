@@ -14,6 +14,8 @@
 		BD6384AF237C7661009E9142 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD6384AE237C7661009E9142 /* Assets.xcassets */; };
 		BD6384B2237C7661009E9142 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD6384B0237C7661009E9142 /* LaunchScreen.storyboard */; };
 		BD6384B5237C7661009E9142 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6384B4237C7661009E9142 /* main.m */; };
+		BD6384BD237C8350009E9142 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6384BC237C8350009E9142 /* Person.m */; };
+		BD6384C0237C83F9009E9142 /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6384BF237C83F9009E9142 /* Car.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,10 @@
 		BD6384B1237C7661009E9142 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD6384B3237C7661009E9142 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD6384B4237C7661009E9142 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BD6384BB237C8350009E9142 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		BD6384BC237C8350009E9142 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		BD6384BE237C83F9009E9142 /* Car.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
+		BD6384BF237C83F9009E9142 /* Car.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +73,10 @@
 				BD6384A6237C765E009E9142 /* SceneDelegate.m */,
 				BD6384A8237C765E009E9142 /* ViewController.h */,
 				BD6384A9237C765E009E9142 /* ViewController.m */,
+				BD6384BB237C8350009E9142 /* Person.h */,
+				BD6384BC237C8350009E9142 /* Person.m */,
+				BD6384BE237C83F9009E9142 /* Car.h */,
+				BD6384BF237C83F9009E9142 /* Car.m */,
 				BD6384AB237C765E009E9142 /* Main.storyboard */,
 				BD6384AE237C7661009E9142 /* Assets.xcassets */,
 				BD6384B0237C7661009E9142 /* LaunchScreen.storyboard */,
@@ -146,8 +156,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD6384C0237C83F9009E9142 /* Car.m in Sources */,
 				BD6384AA237C765E009E9142 /* ViewController.m in Sources */,
 				BD6384A4237C765E009E9142 /* AppDelegate.m in Sources */,
+				BD6384BD237C8350009E9142 /* Person.m in Sources */,
 				BD6384B5237C7661009E9142 /* main.m in Sources */,
 				BD6384A7237C765E009E9142 /* SceneDelegate.m in Sources */,
 			);

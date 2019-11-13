@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "Person.h"
+#import "Car.h"
 
 // Objective-C Automatic Reference Counting = NO
 // CLANG_ENABLE_OBJC_ARC = NO
@@ -51,7 +53,22 @@
 
 	// TODO: Cleanup the memory
 	
-}\
+	
+	// Car
+	
+
+	Car *honda = [[Car alloc] init]; // Car: 1
+	Person *james = [[Person alloc] init]; //James: 1
+	
+	james.car = honda; // Car: 2
+	[honda release];	// Car: 1  // dealer sells car
+	honda = nil;
+	
+	
+	// cleanup
+	[james release];
+	james = nil;
+}
 
 
 
