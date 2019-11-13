@@ -8,6 +8,10 @@
 
 #import "ViewController.h"
 
+// Objective-C Automatic Reference Counting = NO
+// CLANG_ENABLE_OBJC_ARC = NO
+
+
 @interface ViewController ()
 
 @end
