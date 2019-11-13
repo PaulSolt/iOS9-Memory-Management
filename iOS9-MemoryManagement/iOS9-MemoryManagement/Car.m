@@ -19,6 +19,10 @@
 	return self;
 }
 
++ (instancetype)car {
+	return [[[Car alloc] init] autorelease];
+}
+
 - (void)dealloc {
 	NSLog(@"Car.dealloc");
 	[super dealloc];

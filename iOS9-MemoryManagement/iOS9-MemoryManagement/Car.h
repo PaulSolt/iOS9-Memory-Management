@@ -10,4 +10,7 @@
 
 @interface Car : NSObject
 
+// + = class or static
++ (instancetype)car;
+
 @end

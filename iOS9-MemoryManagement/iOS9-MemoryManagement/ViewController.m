@@ -71,6 +71,48 @@
 	// cleanup
 	[james release];
 	james = nil;
+	
+	// Autoreleased or not? Why?
+	
+	NSString *name = [NSString stringWithFormat:@"%@ %@", @"John", @"Miller"];
+	// autorelease
+	
+	NSDate *today = [NSDate date];
+	// autorelease
+	
+	NSDate *now = [NSDate new];
+	// no (rule 3)
+	
+	NSDate *tomorrow2 = [NSDate dateWithTimeIntervalSinceNow:60*60*24];
+	// yes
+	
+	NSDate *nextTomorrow = [tomorrow2 copy]; // retain: 1
+	// no (rule 3 - copy)
+	
+	NSArray *words = [@"This sentence is the bomb" componentsSeparatedByString:@" "];
+	// yes
+	
+	NSString *idea = [[NSString alloc] initWithString:@"Hello Ideas"];
+	// no
+	
+	Car *redCar = [Car car];
+	// yes
+	
+	NSString *idea2 = [[[NSString alloc] initWithString:@"Hello Ideas"] autorelease];
+	// no -> yes
+	
+	NSString *idea3 = [[NSString alloc] initWithString:@"Hello Ideas"];
+	// no
+	
+	[idea3 autorelease];
+	// yes
+
+	// Cleanup
+	[now release];
+	[nextTomorrow release];
+	[idea release];
+	
+	
 }
 
 
