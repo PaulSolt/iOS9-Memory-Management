@@ -21,9 +21,59 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 
+	[self emailContacts];
+	
+	NSString *day = [[NSString alloc] initWithString:@"Wednesday"]; // day: 1
+	NSString *tomorrow = [self newDayOfWeek]; // tomorrow: 1
+	
+	if ([day isEqual:tomorrow]) {
+//		[day retain]; // day: 2
+		NSLog(@"The days are equal");
+	} else {
+//		[tomorrow retain]; // tomorrow: 2
+	}
+	
+	[day release];  // day: 1 -> 0
+	[tomorrow release]; // tomorrow: 1->0  // 2 -> 1 (memory leak)
+	
+	
+	
+	
+	
+	// Activity: Add elements to the array
+
+	NSMutableArray *colors = [[NSMutableArray alloc] init];
+
+	NSString *red = [[NSString alloc] initWithString:@"Red"];
+
+	// TODO: Add red and 3 more colors to the array without leaking memory
+
+
+	// TODO: Cleanup the memory
+	
+}\
 
 
 
+
+
+
+
+- (NSString *)newDayOfWeek {	// create or make (you own the memory returned)
+	return [[NSString alloc] initWithString:@"Thursday"];
+}
+
+- (void)emailContacts {
+	
+	// Retain count: 1
+	NSArray *contacts = [[NSArray alloc] initWithObjects:@"Paul.Solt@LambdaSchool.com", @"John@example.com", nil];
+	
+	// ... Loop through and email each contact
+	for (NSString *contact in contacts) {
+		NSLog(@"Emailing: %@", contact);
+	}
+	// Cleanup
+	[contacts release];	// Retain count: 0 -> the object memory is cleaned up immediately
 }
 
 
