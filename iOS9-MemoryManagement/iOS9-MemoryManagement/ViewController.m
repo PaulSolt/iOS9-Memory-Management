@@ -115,12 +115,6 @@
 	
 }
 
-
-
-
-
-
-
 - (NSString *)newDayOfWeek {	// create or make (you own the memory returned)
 	return [[NSString alloc] initWithString:@"Thursday"];
 }
@@ -137,6 +131,5 @@
 	// Cleanup
 	[contacts release];	// Retain count: 0 -> the object memory is cleaned up immediately
 }
-
 
 @end
